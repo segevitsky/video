@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.2.2/firebase-database.js"></script>
+        <link rel="stylesheet" href="style.css" type="text/css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    </head>
+    <body>
+    
+    <!-- <figure id="videoContainer"> -->
+    <div>
+    <figure>
+    <video autoplay>
+        <source src="http://clips.vorwaerts-gmbh.de/VfE_html5.mp4" type="video/mp4"  /><!-- Safari / iOS, IE9 -->
+        <source src="https://firebasestorage.googleapis.com/v0/b/video-project-c864d.appspot.com/o/VfE.webm?alt=media&token=296c1b0b-da9f-430d-a355-99bb333519f7"      type="video/webm" /><!-- Chrome10+, Ffx4+, Opera10.6+ -->
+        <source src="http://clips.vorwaerts-gmbh.de/VfE.ogv"       type="video/ogg"  /><!-- Firefox3.6+ / Opera 10.5+ -->
+        <object type="application/x-shockwave-flash" data="flash-player.swf?videoUrl=video/clips.vorwaerts-gmbh.de/VfE_html5.mp4" width="1024" height="576">
+            <param name="movie" value="flash-player.swf?videoUrl=video/clips.vorwaerts-gmbh.de/VfE_html5.mp4" />
+            <param name="allowfullscreen" value="true" />
+            <param name="wmode" value="transparent" />
+            <param name="flashvars" value="controlbar=over&amp;image=img/poster.jpg&amp;file=flash-player.swf?videoUrl=video/clips.vorwaerts-gmbh.de/VfE_html5.mp4" />
+        </object>
+    </video>
+    </figure>
+        <div id="video-controls" class="controls" data-state="hidden">
+            <button id="playpause" type="button" data-state="play">Play/Pause</button>
+            <button id="stop" type="button" data-state="stop">Stop</button>
+            <div class="progress">
+            <label id="timer" for="progress" role="timer"></label>
+            <progress id="progress" value="0" min="0">
+                <span id="progress-bar"></span>
+            </progress>
+            </div>
+            <button id="mute" type="button" data-state="mute">Mute/Unmute</button>
+            <button id="volinc" type="button" data-state="volup">Vol+</button>
+            <button id="voldec" type="button" data-state="voldown">Vol-</button>
+            <!-- <button id="fs" type="button" data-state="go-fullscreen">Fullscreen</button> -->
+        </div> 
+
+    <!-- </figure>    -->
+    
+    <div class="social">
+        <div class="viewsContainer">
+            <span class="viewsCaption">Views: </span>
+            <span class="views">0</span>
+        </div>
+        <div class="voteContainer">
+            <button id="thumbsUp"><i class="far fa-thumbs-up"></i> <span class="up-vote"> 0 </span></button>
+            <button id="thumbsDown"><i class="fas fa-thumbs-down"></i> <span class="down-vote"> 0 </span> </button>
+        </div>
+    </div>
+    
+    </div>
+
+    <script type='text/javascript' src="./bundle.js"> </script>
+    </body>
+</html>
